@@ -7,7 +7,7 @@ form.addEventListener('input', throttle(getInput, 500));
 form.addEventListener('submit', getEmail);
 
 function getInput(e) {
-  formData = { email: email.value, message: message.value };
+  const formData = { email: email.value, message: message.value };
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 
